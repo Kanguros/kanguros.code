@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "my-package"
+version = "0.1.0"
+description = ""
+authors = ["Kangur <urbanek.kamil@gmail.com>"]
+packages = [{include = "my_package"}]
+
+[tool.poetry.scripts]
+myc = 'my_package.cli:cli'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.6"
+pytest = "^7.4.0"
+requests = "^2.31.0"
+rich = "^13.5.2"
+rich-click = "^1.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
